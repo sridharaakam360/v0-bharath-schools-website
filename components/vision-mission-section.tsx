@@ -44,7 +44,7 @@ export function VisionMissionSection() {
     <section
       ref={sectionRef}
       id="vision-mission"
-      className="py-20 bg-primary relative overflow-hidden"
+      className="py-20 bg-primary relative overflow-hidden rounded-t-3xl shadow-2xl min-h-screen"
     >
       {/* Parallax Background Pattern */}
       <div

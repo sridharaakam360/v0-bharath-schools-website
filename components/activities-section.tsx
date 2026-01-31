@@ -69,7 +69,7 @@ export function ActivitiesSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="activities" className="py-20 bg-muted relative overflow-hidden">
+    <section ref={sectionRef} id="activities" className="py-20 bg-muted relative overflow-hidden rounded-t-3xl shadow-2xl min-h-screen">
       {/* Parallax background decoration */}
       <div
         className="absolute top-0 left-1/4 w-64 h-64 rounded-full bg-primary/5 blur-3xl pointer-events-none"

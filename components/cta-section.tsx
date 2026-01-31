@@ -25,7 +25,7 @@ export function CTASection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-20 bg-secondary relative overflow-hidden">
+    <section ref={sectionRef} className="py-20 bg-secondary relative overflow-hidden rounded-t-3xl shadow-2xl min-h-[50vh]">
       {/* Parallax background pattern */}
       <div
         className="absolute inset-0 opacity-20 pointer-events-none"

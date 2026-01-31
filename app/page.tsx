@@ -6,17 +6,20 @@ import { VisionMissionSection } from "@/components/vision-mission-section"
 import { ActivitiesSection } from "@/components/activities-section"
 import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
+import { StackingCardsContainer } from "@/components/stacking-cards"
 
 export default function HomePage() {
   return (
     <main className="min-h-screen">
       <Header />
       <HeroCarousel />
-      <FeaturesSection />
-      <AboutSection />
-      <VisionMissionSection />
-      <ActivitiesSection />
-      <CTASection />
+      <StackingCardsContainer>
+        <FeaturesSection />
+        <AboutSection />
+        <VisionMissionSection />
+        <ActivitiesSection />
+        <CTASection />
+      </StackingCardsContainer>
       <Footer />
     </main>
   )

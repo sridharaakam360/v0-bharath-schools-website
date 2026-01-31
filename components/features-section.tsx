@@ -93,7 +93,7 @@ export function FeaturesSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-20 bg-muted relative overflow-hidden">
+    <section ref={sectionRef} className="py-20 bg-muted relative overflow-hidden rounded-t-3xl shadow-2xl min-h-screen">
       {/* Parallax Background Elements */}
       <div
         className="absolute inset-0 opacity-5 pointer-events-none"

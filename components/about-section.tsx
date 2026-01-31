@@ -51,7 +51,7 @@ export function AboutSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="about" className="py-20 bg-background relative overflow-hidden">
+    <section ref={sectionRef} id="about" className="py-20 bg-background relative overflow-hidden rounded-t-3xl shadow-2xl min-h-screen">
       {/* Decorative parallax background */}
       <div
         className="absolute top-0 right-0 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none"
