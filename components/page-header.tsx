@@ -31,7 +31,7 @@ export function PageHeader({ title, subtitle, breadcrumb }: PageHeaderProps) {
   }, [])
 
   return (
-    <section className="relative bg-primary pt-32 pb-16 overflow-hidden">
+    <section className="relative bg-primary pt-32 pb-32 overflow-hidden">
       {/* Decorative Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-64 h-64 bg-secondary rounded-full -translate-x-1/2 -translate-y-1/2" />

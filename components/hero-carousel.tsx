@@ -4,6 +4,12 @@ import { useState, useEffect, useCallback } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import { useRouter } from "next/navigation"
+import { AdmissionEnquiryModal } from "@/components/admission-enquiry-modal"
+
+
+
+
 
 const slides = [
   {
@@ -26,6 +32,10 @@ const slides = [
 
 export function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0)
+
+  const router = useRouter()
+
+  const [openModal, setOpenModal] = useState(false)
 
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % slides.length)
@@ -71,12 +81,22 @@ export function HeroCarousel() {
           Empowering Students – Excellence For All | From All
         </p>
         <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: "0.4s" }}>
-          <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 text-lg px-8">
-            Admission Enquiry
-          </Button>
-          <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 text-lg px-8 bg-transparent">
-            Contact Us
-          </Button>
+          <Button
+  size="lg"
+  className="bg-secondary text-secondary-foreground text-lg px-8"
+  onClick={() => setOpenModal(true)}
+>
+  Admission Enquiry
+</Button>
+
+          <Button
+  size="lg"
+  variant="outline"
+  onClick={() => router.push("/contact")}
+  className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 text-lg px-8 bg-transparent"
+>
+  Contact Us
+</Button>
         </div>
       </div>
 
@@ -109,6 +129,11 @@ export function HeroCarousel() {
           />
         ))}
       </div>
+      <AdmissionEnquiryModal
+  open={openModal}
+  onClose={() => setOpenModal(false)}
+/>
+
     </section>
   )
 }
